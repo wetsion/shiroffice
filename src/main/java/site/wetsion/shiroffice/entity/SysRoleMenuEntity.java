@@ -4,20 +4,22 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author weixin
  * @version 1.0
- * @CLassName SysMenuEntity
- * @date 2019/12/31 5:22 PM
+ * @CLassName SysRoleMenuEntity
+ * @date 2020/1/2 2:51 PM
  */
 @Data
-@TableName("sys_menu")
-public class SysMenuEntity {
+@TableName("sys_role_menu")
+public class SysRoleMenuEntity implements Serializable {
 
     @TableId
     private Long id;
 
-    private String name;
+    private Long roleId;
 
-    private String perms;
+    private Long menuId;
 }
